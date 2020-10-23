@@ -1,0 +1,33 @@
+>>> a1,a2,a3,a4=12,144,3.14,'omega'  #4 variables with different data,also a string data type to give example of Concatenation
+>>>a0=a4+2  #in general, strings cannot have mathematical operations performed on them 
+>>>print(a0)
+#Python 3.9.0 gives TypeError: cannot concatenate 'str' and 'int' objects on line 3
+#but there is an operation called Concatenation using the plus (+) symbol when using 2 string objects or more
+#Concatenation in terms of strings just joins the string data together (without any arithmetic addition performed)
+#example as follows
+>>>a=a4+'omega'+'zebra'   #here we are concatenating string and the answer will not be 2omegazebra
+>>>print(a)               #concatenation joins things together like sun+flower=sunflower
+omegaomegazebra
+#Now some arithmetic operations and order of operation examples are below
+>>> a5,a6=(a2/a1),(a2//a1)   #performing division & floor division
+>>> print(a5,a6)   #also division will keep the remainder that is why we still have 12.0 and not 12,while floor division gives only integer value
+12.0 12  
+>>> a7=a1+a3    
+#here we can combine an integer 12+3.14=15.14,thereby combining an integer and a float and it gives a float answer
+>>> print(a7)
+15.14
+>>> a8,a9=(a1*a1),(a2**a2)  #a8 is a simple multiplication (12*12),while a9 will be a huge exponentiation answer (144^144)
+>>> print (a8,a9)
+144 63708717381247861841182616291356534373711642773756847120291210786024386828110496195538408541399667331347621162040492392564612493395424177880628868686935437933360262424507198720775910419712130236624297480419399634557904200517799815616339247475658150180595343449836054056764117784476948835303036764959289320144896
+>>> a10=a8-a2+a8%a2  #subtraction and modulus.So,a10 =144-144+144%144=0
+>>> print(a10)
+0
+>>> #now lets look at 2 little difficult mathematical expressions further below to look at order of operation
+>>> a11=16-2*5//3+1        #expression#1-it follows the order of operation rule called PEDMAS
+>>> #above arithmetic expression is evaluated as (2*5) first, then (10 // 3), then (16-3), and then (13+1)
+>>> print (a11)
+14
+>>> a12=2**2**3*3
+>>> #expression#2-similarly here by following order of operations we should have 2**2**3 which is 2^2^3=256 and then 258*3=768
+>>> print(a12)
+768
