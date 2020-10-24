@@ -1,0 +1,17 @@
+>>> from copy import deepcopy         #from module copy importing deepcopy function
+>>> lista = ['c','a',['cat','bat']]   #define lista with a sublist
+>>> listb= deepcopy(lista)            #copying elements of lista to listb  
+>>> print(lista)
+['c', 'a', ['cat', 'bat']]
+>>> print(listb)                      
+['c', 'a', ['cat', 'bat']]           #data of lista has been copied to listb
+>>> id(lista)
+1203330505600
+>>> id(listb)                        #we see that both lists have seperate identities
+1203371106176
+>>> listb[2][1] = "food"             #lets change 2nd sublist data in listb
+>>> listb[0] = "t"                   #lets change data of 1st in listb
+>>> print(lista)                     #lista elements remain the unchanged as expected
+['c', 'a', ['cat', 'bat']]
+>>> print(listb)                     #1st element,2nd sublist element data of listb has be changed as specified previosly
+['t', 'a', ['cat', 'food']]
